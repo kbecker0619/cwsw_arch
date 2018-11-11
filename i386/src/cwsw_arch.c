@@ -19,7 +19,10 @@
 // ============================================================================
 
 #include "projcfg.h"
-#if !( (XPRJ_Debug_Win_MinGW) || (XPRJ_Debug_Linux_GCC) || (XPRJ_Debug_CVI) )		/* { */
+#if !(  (XPRJ_Debug_Win_MinGW) ||   \
+        (XPRJ_Debug_Linux_GCC) ||   \
+        (XPRJ_NB_Debug) ||          \
+        (XPRJ_Debug_CVI) )		/* { */
 #error Unknown CPU Architecture
 #endif															/* } */
 
@@ -106,7 +109,7 @@ Cwsw_Arch__Init(void)
 
 	/* Core Processor Initialization
 	 * forgive this flagrant violation of personal ingenuity, but the names and call order is
-	 * borrowed, /FOR NOW/, from MHC. I fully intend to absract this so it's my own implementation,
+	 * borrowed, /FOR NOW/, from MHC. I fully intend to abstract this so it's my own implementation,
 	 * not a blatant borrowing of someone else's favored methods.
 	 */
 	SYS_CLK_Initialize( NULL );
