@@ -1,9 +1,9 @@
 /** @file
- *	@brief	One-sentence short description of file.
+ *	@brief	API for CWSW Arch component (MCU architecture).
  *
  *	Description:
  *
- *	Copyright (c) 2018 Kevin L. Becker. All rights reserved.
+ *	Copyright (c) 2019 Kevin L. Becker. All rights reserved.
  *
  *	Original:
  *	Created on: Jan 3, 2018
