@@ -19,9 +19,10 @@
 // ============================================================================
 
 #include "projcfg.h"
-#if !(  (XPRJ_Win_MinGW_Debug) ||	\
-        (XPRJ_Debug_Linux_GCC) ||	\
-        (XPRJ_NB_Debug) ||			\
+#if !(  (XPRJ_Win_MinGW_Debug)	||	\
+        (XPRJ_Debug_Linux_GCC)	||	\
+        (XPRJ_NB_Debug)			||	\
+		(XPRJ_MSVC_Debug)		||	\
         (XPRJ_CVI_Debug) )			/* { */
 #error Unknown CPU Architecture
 #endif															/* } */
