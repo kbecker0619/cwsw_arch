@@ -1,4 +1,0 @@
-cwsw_arch_common.h supplemental API header; DO NOT INCLUDE DIRECTLY
-descript.ion 7-Zip file that provides file commentary
-i386 Arch support for PC builds (Win + Lin)
-README.md This folder contains the support for all supported MCU architectures. Exclude from build those that don't apply

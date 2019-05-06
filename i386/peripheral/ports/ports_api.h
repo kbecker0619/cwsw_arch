@@ -1,9 +1,6 @@
 /** @file
  *	@brief	GPIO pin definitions for desktop.
  *
- *	Description:
- *
- *
  *	@note	This file is an as-needed COPY of the file created by Microchip's Harmony Configurator,
  *	v2.04, and/or the tool-created support files (e.g., Peripheral Libs) supplied as part of the
  *	MHC eco system. We have NO intention of stealing code or technology, or of claiming undue
@@ -18,15 +15,10 @@
  *	Original:
  *	Created on: Dec 28, 2017
  *	Author: kbecker
- *
- *	Current:
- *	$Revision: $
- *	$Date: $
  */
 
 #ifndef PORTS_NONE_H_
 #define PORTS_NONE_H_
-
 
 // ============================================================================
 // ----	Include Files ---------------------------------------------------------

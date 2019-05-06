@@ -1,4 +1,0 @@
-cwsw_arch.h PRIMARY API for i386 architecture support. DO INCLUDE THIS
-descript.ion 7-Zip file that provides file commentary
-README.md This folder contains the support for the PC MCU architecture
-src Implementation file(s) for this architecture

@@ -11,18 +11,10 @@
  *	Original:
  *	Created on: Jan 3, 2018
  *	Author: kbecker
- *
- *	Current:
- *	$Revision: $
- *	$Date: $
  */
 
 #ifndef CWSW_ARCH_COMMON_H_
 #define CWSW_ARCH_COMMON_H_
-
-#ifdef	__cplusplus
-extern "C" {
-#endif
 
 // ============================================================================
 // ----	Include Files ---------------------------------------------------------
@@ -36,6 +28,11 @@ extern "C" {
 // ----	Project Headers -------------------------
 
 // ----	Module Headers --------------------------
+
+
+#ifdef	__cplusplus
+extern "C" {
+#endif
 
 
 // ============================================================================
