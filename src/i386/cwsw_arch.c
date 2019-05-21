@@ -3,7 +3,7 @@
  *
  *	Description:
  *
- *	Copyright (c) 2018 Kevin L. Becker. All rights reserved.
+ *	Copyright (c) 2019 Kevin L. Becker. All rights reserved.
  *
  *	Original:
  *	Created on: Jan 3, 2018
@@ -28,10 +28,11 @@
 #endif															/* } */
 
 // ----	System Headers --------------------------
+#include <stddef.h>		/* NULL */
 #include <stdbool.h>
 
 // ----	Project Headers -------------------------
-#include "cwsw_lib.h"
+//#include "cwsw_lib.h"
 
 // ----	Module Headers --------------------------
 #include "cwsw_arch.h"
@@ -52,7 +53,6 @@
 // ============================================================================
 // ----	Module-level Variables ------------------------------------------------
 // ============================================================================
-static char const * const cwsw_arch_RevString = "$Revision: 0123 $";
 
 static bool initialized = false;
 
@@ -65,14 +65,14 @@ static bool initialized = false;
 #include "system/clk/sys_clk.h"
 
 #else
-#define SYS_CLK_Initialize(a)			do { UNUSED(a); } while(0)
+#define SYS_CLK_Initialize(a)			do { (void)(a); } while(0)
 
 #endif
 
 #if (USE_SYS_DEVCON)
 #else
-#define SYS_DEVCON_Initialize(a, b)		do { UNUSED(a); UNUSED(b); } while(0)
-#define SYS_DEVCON_PerformanceConfig(a)	do { UNUSED(a); } while(0)
+#define SYS_DEVCON_Initialize(a, b)		do { (void)(a); (void)(b); } while(0)
+#define SYS_DEVCON_PerformanceConfig(a)	do { (void)(a); } while(0)
 #endif
 
 #if (USE_SYS_PORTS)
@@ -90,7 +90,7 @@ uint16_t
 Cwsw_Arch__Init(void)
 {
 
-	UNUSED(cwsw_arch_RevString);
+#if defined(UNIT_TEST)
 	// for desktop use, there's really not much to do here.
 
 	#if defined(__GNUC__)	/* --- GNU Environment ------------------------------ */
@@ -107,6 +107,7 @@ Cwsw_Arch__Init(void)
 	#if defined(__GNUC__)	/* --- GNU Environment ------------------------------ */
 	#pragma GCC diagnostic pop
 	#endif
+#endif
 
 	/* Core Processor Initialization
 	 * forgive this flagrant violation of personal ingenuity, but the names and call order is

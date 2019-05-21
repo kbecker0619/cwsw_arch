@@ -1,32 +1,26 @@
 /** @file
- *	@brief	One-sentence short description of file.
- *
- *	Description:
+ *	@brief	Primary Unit Test file for the CWSW Arch component.
  *
  *	Copyright (c) 2019 Kevin L. Becker. All rights reserved.
  *
  *	Original:
- *	Created on: Jan 5, 2018
+ *	Created on: Nov 11, 2018
  *	Author: kbecker
- *
- *	Current:
- *	$Revision: $
- *	$Date: $
  */
 
 // ============================================================================
 // ----	Include Files ---------------------------------------------------------
 // ============================================================================
 
-#include "projcfg.h"
-
 // ----	System Headers --------------------------
+#include <stdio.h>
+#include <stdlib.h>
+#include <limits.h>	/* INT_MAX */
 
 // ----	Project Headers -------------------------
-//#include "cwsw_lib.h"
-#include "ports_api.h"
 
 // ----	Module Headers --------------------------
+#include "cwsw_arch.h"
 
 
 // ============================================================================
@@ -53,77 +47,31 @@
 // ----	Public Functions ------------------------------------------------------
 // ============================================================================
 
-/* klb: this is architecture-specific, but Microchip adds one more level of indirection, to
- * customize to the specific MCU actually used.
- *
- * This is agnostic about the board on which the MCU resides.
- *
- * For "none", this is a nop. For LabWindows/CVI, this would light an LED (when I add that support).
- *
- * @note can't use the default "PLIB_INLINE_API" decorator, because of two opposing things:
- * 	(a) "extern" in conflict with "static"
- * 	(b) sans "static", you get multiple-definition linking errors. don't know (yet) how this is
- * 		avoided in MPLAB projects.
- *
- * to compensate, modified the Microchip definition of PLIB_INLINE, to eliminate the "extern"
- * storage identifier.
- */
-#if (XPRJ_CVI_Debug)
-#include "cwsw_dio_uir.h"
-#endif
+#if 0
 void
-PLIB_PORTS_PinWrite(PORTS_MODULE_ID index, PORTS_CHANNEL channel, PORTS_BIT_POS bitPos, bool value)
+EventHandler__evNotInit(tEventPayload EventData)
 {
-	(void)(index);
-	(void)(channel);
-	(void)(bitPos);
-	(void)(value);
-
-#if defined(DEMO_APP)
-	dbg_printf(
-		"\tDO Write, Idx: %i, Channel: %i, Bit: %i, Value: %s\n",
-		index, channel, bitPos, value ? "On" : "Off");
-#endif
-
-	#if (XPRJ_Debug_CVI)
-	{
-		lwWriteVirtualPin(bitPos, value);
-
-	}
-	#endif
+	UNUSED(EventData);
 }
 
-bool
-PLIB_PORTS_PinGet(PORTS_MODULE_ID index, PORTS_CHANNEL channel, PORTS_BIT_POS bitPos)
+void
+EventHandler__evTerminateRequested(tEventPayload EventData)
 {
-	(void)(index);
-	(void)(bitPos);
-
-#if defined(DEMO_APP)
-	dbg_printf(
-		"\tDO Read, Idx: %i, Channel: %i, Bit: %i\n",
-		index, channel, bitPos);
+	UNUSED(EventData);
+	(void)puts("Goodbye Cruel World!");
+}
 #endif
 
-	#if (XPRJ_Debug_CVI)
-	return lwReadVirtualPin(channel, bitPos);
 
-	#else
-	switch(channel)
+/*
+ *
+ */
+int
+main(void)
+{
+	if(!Cwsw_Arch__Get_Initialized())
 	{
-	case PORT_CHANNEL_B:
-		switch(bitPos)
-		{
-		case PORTS_BIT_POS_0:
-			break;
-		default:
-			break;
-		}
-		break;
-	default:
-		return false;
+		(void)Cwsw_Arch__Init();
 	}
-
-	#endif
-	return false;
+    return (EXIT_SUCCESS);
 }

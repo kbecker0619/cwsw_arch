@@ -1,32 +1,25 @@
-/** @file
- *	@brief	One-sentence short description of file.
- *
- *	Description:
+/** @file cwsw_lib_test_task_support.c
  *
  *	Copyright (c) 2019 Kevin L. Becker. All rights reserved.
  *
  *	Original:
- *	Created on: Jan 5, 2018
- *	Author: kbecker
- *
- *	Current:
- *	$Revision: $
- *	$Date: $
+ *	Created on: Apr 22, 2019
+ *	Author: KBECKE35
  */
 
 // ============================================================================
 // ----	Include Files ---------------------------------------------------------
 // ============================================================================
 
-#include "projcfg.h"
-
 // ----	System Headers --------------------------
 
 // ----	Project Headers -------------------------
-//#include "cwsw_lib.h"
-#include "ports_api.h"
+#include <CUnit/Basic.h>
+#include "cwsw_eventsim.h"
 
 // ----	Module Headers --------------------------
+#include "cwsw_lib.h"
+#include "cwsw_lib_test_task_support.h"
 
 
 // ============================================================================
@@ -53,77 +46,47 @@
 // ----	Public Functions ------------------------------------------------------
 // ============================================================================
 
-/* klb: this is architecture-specific, but Microchip adds one more level of indirection, to
- * customize to the specific MCU actually used.
+/** Initialize the CUnit Tasking Support suite for the CWSW Library component.
  *
- * This is agnostic about the board on which the MCU resides.
- *
- * For "none", this is a nop. For LabWindows/CVI, this would light an LED (when I add that support).
- *
- * @note can't use the default "PLIB_INLINE_API" decorator, because of two opposing things:
- * 	(a) "extern" in conflict with "static"
- * 	(b) sans "static", you get multiple-definition linking errors. don't know (yet) how this is
- * 		avoided in MPLAB projects.
- *
- * to compensate, modified the Microchip definition of PLIB_INLINE, to eliminate the "extern"
- * storage identifier.
+ *	@return 0 for success.
+ *  @return non-0 for failure.
  */
-#if (XPRJ_CVI_Debug)
-#include "cwsw_dio_uir.h"
-#endif
-void
-PLIB_PORTS_PinWrite(PORTS_MODULE_ID index, PORTS_CHANNEL channel, PORTS_BIT_POS bitPos, bool value)
+int
+init_suite_lib_task_support(void)
 {
-	(void)(index);
-	(void)(channel);
-	(void)(bitPos);
-	(void)(value);
-
-#if defined(DEMO_APP)
-	dbg_printf(
-		"\tDO Write, Idx: %i, Channel: %i, Bit: %i, Value: %s\n",
-		index, channel, bitPos, value ? "On" : "Off");
-#endif
-
-	#if (XPRJ_Debug_CVI)
-	{
-		lwWriteVirtualPin(bitPos, value);
-
-	}
-	#endif
+	return CUE_SUCCESS;
 }
 
-bool
-PLIB_PORTS_PinGet(PORTS_MODULE_ID index, PORTS_CHANNEL channel, PORTS_BIT_POS bitPos)
+/** Perform final cleanup of the Tasking Support suite for the CWSW Library component.
+ *  For this edition of this UT suite, there is no actual cleanup activity
+ *  required.
+ *
+ *	@return 0 for success.
+ *  @return non-0 for failure.
+ */
+int
+clean_suite_lib_task_support(void)
 {
-	(void)(index);
-	(void)(bitPos);
+	return CUE_SUCCESS;
+}
 
-#if defined(DEMO_APP)
-	dbg_printf(
-		"\tDO Read, Idx: %i, Channel: %i, Bit: %i\n",
-		index, channel, bitPos);
-#endif
 
-	#if (XPRJ_Debug_CVI)
-	return lwReadVirtualPin(channel, bitPos);
+/** Dummy task function to satisfy tasking API. */
+void
+SR_LIB_0200__Task(void)
+{
+    /* intentionally empty */
+}
 
-	#else
-	switch(channel)
-	{
-	case PORT_CHANNEL_B:
-		switch(bitPos)
-		{
-		case PORTS_BIT_POS_0:
-			break;
-		default:
-			break;
-		}
-		break;
-	default:
-		return false;
-	}
-
-	#endif
-	return false;
+/** Confirm presence of an API to support component tasks.
+ *  @xreq{SR_LIB_0200}
+ */
+void
+test_sr_lib_0200(void)
+{
+    /* if this compiles, we've satisfied the requirement (as of the current
+     * revision of the requirements document)
+     */
+    Task(SR_LIB_0200);
+    CU_PASS("Tasking API Exists");
 }
