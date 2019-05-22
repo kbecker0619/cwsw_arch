@@ -32,7 +32,7 @@
                      displayName="cwsw_arch_test"
                      projectFiles="true"
                      kind="TEST">
-        <itemPath>ut/cwsw_lib_test.c</itemPath>
+        <itemPath>ut/cwsw_arch_test.c</itemPath>
         <itemPath>ut/cwsw_lib_test_crit_section.c</itemPath>
         <itemPath>ut/cwsw_lib_test_crit_section.h</itemPath>
         <itemPath>ut/cwsw_lib_test_op_states.c</itemPath>
@@ -113,7 +113,7 @@
           </linkerLibItems>
         </linkerTool>
       </folder>
-      <item path="ut/cwsw_lib_test.c" ex="false" tool="0" flavor2="0">
+      <item path="ut/cwsw_arch_test.c" ex="false" tool="0" flavor2="0">
       </item>
       <item path="ut/cwsw_lib_test_crit_section.c" ex="false" tool="0" flavor2="0">
       </item>
@@ -174,7 +174,7 @@
           </linkerLibItems>
         </linkerTool>
       </folder>
-      <item path="ut/cwsw_lib_test.c" ex="false" tool="0" flavor2="0">
+      <item path="ut/cwsw_arch_test.c" ex="false" tool="0" flavor2="0">
       </item>
       <item path="ut/cwsw_lib_test_crit_section.c" ex="false" tool="0" flavor2="0">
       </item>

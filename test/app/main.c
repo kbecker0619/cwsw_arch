@@ -63,8 +63,10 @@ EventHandler__evTerminateRequested(tEventPayload EventData)
 #endif
 
 
-/*
- *
+/** Entry for demonstration app for core part of CWSW Arch component.
+ *	This is extremely limited in functionality by design, and is not intended
+ *	to demonstrate the features and capabilities of the library. That task is
+ *	left to the Architecture Integration project.
  */
 int
 main(void)

@@ -1,0 +1,10 @@
+# Customized Doxyfile for CWSW Arch component
+#   This configuration superclasses the component-specific Doxy configuration for this project, 
+#	and provides a customization of it specifically for this developer.
+
+# include the actual component doxy project
+@INCLUDE		 = doc_arch/cwsw_arch.doxyfile
+
+# LAYOUT_FILE      = doc_lib/Doxy_Layout.xml
+# IMAGE_PATH       = doc_lib/images
+# EXCLUDE			+= doc_lib/images/README.md

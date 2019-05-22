@@ -1,0 +1,10 @@
+# Customized Doxyfile for CWSW Arch component
+#   This configuration superclasses the component-specific Doxy configuration for this project, 
+#	and provides a customization of it specifically for this developer.
+
+# include this repo's local doxy project
+@INCLUDE		 	   =  cwsw_arch.doxyfile
+
+# override the default location of dot with my own location.
+DOT_PATH     		   =  "C:/_Programs/Graphviz2.38/bin"
+PLANTUML_JAR_PATH      =  "C:/_Programs/plantuml" 

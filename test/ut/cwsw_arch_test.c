@@ -1,17 +1,11 @@
-/** @file cwsw_lib_test.c
- *	@brief	Primary Unit Test file for the CWSW Lib component.
- *
- *	Description:
+/** @file 
+ *	@brief	Primary Unit Test file for the CWSW Arch[itecture] component.
  *
  *	Copyright (c) 2019 Kevin L. Becker. All rights reserved.
  *
  *	Original:
  *	Created on: Nov 11, 2018
  *	Author: kbecker
- *
- *	Current:
- *	$Revision: $
- *	$Date: $
  */
 
 // ============================================================================
@@ -25,10 +19,9 @@
 
 // ----	Project Headers -------------------------
 #include <CUnit/Basic.h>
-#include "cwsw_eventsim.h"
 
 // ----	Module Headers --------------------------
-#include "cwsw_lib.h"
+#include "cwsw_arch.h"
 #include "cwsw_lib_test_op_states.h"
 #include "cwsw_lib_test_task_support.h"
 #include "cwsw_lib_test_crit_section.h"
@@ -122,7 +115,7 @@ main(void)
 		if(cu_setup_ok)
 		{
 			pSuite = CU_add_suite(
-					"CWSW Library Component, Tasking Support",
+					"CWSW Arch Component, Tasking Support",
 					init_suite_lib_task_support,
 					clean_suite_lib_task_support);
 			if(NULL == pSuite)
@@ -150,7 +143,7 @@ main(void)
 		if(cu_setup_ok)
 		{
 			pSuite = CU_add_suite(
-					"CWSW Library Component, Protected Regions Support",
+					"CWSW Arch Component, Protected Regions Support",
 					init_suite_lib_crit_section,
 					clean_suite_lib_crit_section);
 			if(NULL == pSuite)
