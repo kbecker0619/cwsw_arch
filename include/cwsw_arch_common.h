@@ -23,7 +23,6 @@
 #include "projcfg.h"
 
 // ----	System Headers --------------------------
-#include <stdint.h>
 
 // ----	Project Headers -------------------------
 
@@ -38,7 +37,7 @@ extern "C" {
 // ============================================================================
 // ----	Constants -------------------------------------------------------------
 // ============================================================================
-#define CWSW_ARCH_COMMON_H__REVSTRING "$Revision: 0123 $"
+#define CWSW_ARCH_COMMON_H__REVSTRING "$Revision: 0.2.0 $"
 
 
 // ============================================================================
@@ -54,7 +53,10 @@ extern "C" {
 // ============================================================================
 
 // ==== Discrete Functions ================================================== {
-/** Initialization for the MCU Architecture Support component.
+
+/* contrary to normal practice, this function doxymented here so that it doesn't need to be done
+ * repeatedly, for each supported architecture.
+ *//** Initialization for the MCU Architecture Support component.
  *	This function's responsibility is to set up the local vars, and manage the necessary HW, to
  *	prepare for the task function's 1st call (once the scheduler has been started).
  *
@@ -68,7 +70,24 @@ extern "C" {
  *	initialization functions. This module sits at the "bottom" of the dependency
  *	tree, excepting for calls into support libraries.
  *
- *	@returns error code, or 0 for no problem (i.e., success).
+ *	@returns	0 if the component is successfully initialized.
+ *	@returns	error code if the component is not initialized.
+ *	@note		By design, this component does not depend on specific
+ *				enumerated names for the return code; in the CWSW ecosystem,
+ *				the simulated event mechanism is used to handle error codes.
+ *
+ * 	@startuml
+ *		System	->		cwsw_arch: Init()
+ *		System	\\--	cwsw_arch: Error code
+ *	@enduml
+ *
+ *	@xreq{SR_ARCH_0000}	(Primary, Component-specific)
+ *
+ *	@note By design, this function unilaterally reinitializes the component and
+ *	returns all internal operating stateful behavior to original operating
+ *	state. This means it takes exception to @req{SR_tbd_0003} and @req{SR_tbd_0004}
+ *
+ *	@ingroup	cwsw_arch_init_group
  */
 extern uint16_t Cwsw_Arch__Init(void);
 
