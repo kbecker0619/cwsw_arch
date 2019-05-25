@@ -1,7 +1,7 @@
 /** @file
  *	@brief	Initialize the MCU.
  *
- *	Description:
+ *	This module is not intended to stand alone; it depends on some parts of the CWSW Lib component.
  *
  *	Copyright (c) 2019 Kevin L. Becker. All rights reserved.
  *
@@ -32,7 +32,7 @@
 #include <stdbool.h>
 
 // ----	Project Headers -------------------------
-//#include "cwsw_lib.h"
+#include "cwsw_lib.h"
 
 // ----	Module Headers --------------------------
 #include "cwsw_arch.h"
@@ -53,6 +53,7 @@
 // ============================================================================
 // ----	Module-level Variables ------------------------------------------------
 // ============================================================================
+static char const * const cwsw_arch_RevString = "$Revision: 0.2.0 $";
 
 static bool initialized = false;
 
@@ -89,25 +90,19 @@ static bool initialized = false;
 uint16_t
 Cwsw_Arch__Init(void)
 {
-
-#if defined(UNIT_TEST)
 	// for desktop use, there's really not much to do here.
+	if(BUILD_FOR_UNIT_TEST)
+	{
+		SUPPRESS_EXTRAISO_IDENT;	/* suppress warning for function name */
 
-	#if defined(__GNUC__)	/* --- GNU Environment ------------------------------ */
-	#pragma GCC diagnostic push
-	#pragma GCC diagnostic ignored "-Wpedantic"
-	#endif
+		dbg_printf(
+				"\tModule ID %i\t%s\t%s\n"
+				"\tEntering %s()\n\n",
+				Cwsw_Arch, __FILE__, cwsw_arch_RevString,
+				__FUNCTION__);
 
-	dbg_printf(
-			"\tModule ID %i\t%s\t%s\n"
-			"\tEntering %s()\n\n",
-			Cwsw_Arch, __FILE__, cwsw_arch_RevString,
-			__FUNCTION__);
-
-	#if defined(__GNUC__)	/* --- GNU Environment ------------------------------ */
-	#pragma GCC diagnostic pop
-	#endif
-#endif
+		RESTORE_WARNING_CONTEXT;
+	}
 
 	/* Core Processor Initialization
 	 * forgive this flagrant violation of personal ingenuity, but the names and call order is
