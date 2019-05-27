@@ -2,9 +2,8 @@
  *
  *	Copyright (c) 2019 Kevin L. Becker. All rights reserved.
  *
- *	Original:
  *	Created on: Apr 21, 2019
- *	Author: KBECKE35
+ *	@author KBECKE35
  */
 
 #ifndef UT_CWSW_LIB_TEST_OP_STATES_H_

@@ -8,9 +8,8 @@
  *
  *	Copyright (c) 2019 Kevin L. Becker. All rights reserved.
  *
- *	Original:
  *	Created on: Jan 3, 2018
- *	Author: kbecker
+ *	@author kbecker
  */
 
 #ifndef CWSW_ARCH_COMMON_H_
@@ -56,11 +55,13 @@ extern "C" {
 
 // ==== Discrete Functions ================================================== {
 
-/* contrary to normal practice, this function doxymented here (at the API, rather than in the
- * implementation) so that it doesn't need to be done repeatedly, for each supported architecture.
+/* contrary to normal practice, this function doxymented here (at the API,
+ * rather than in the implementation) so that it doesn't need to be done
+ * repeatedly, for each supported architecture.
  *//** Initialization for the MCU Architecture Support component.
- *	This function's responsibility is to set up the local vars, and manage the necessary HW, to
- *	prepare for the task function's 1st call (once the scheduler has been started).
+ *	This function's responsibility is to set up the local vars, and manage the
+ *	necessary HW, to prepare for the task function's 1st call (once the
+ *	scheduler has been started).
  *
  *	This function shall be called before the main scheduler is started.
  *
@@ -68,9 +69,10 @@ extern "C" {
  *	before this function is called (since this module depends on the library),
  *	though this is not a strict requirement.
  *
- *	As general guidance, this should be called before board or application
- *	initialization functions. This module sits at the "bottom" of the dependency
- *	tree, excepting for calls into support libraries.
+ *	**Note**: This function (and this module) are not intended to replace the
+ *	architecture support required for the integration project; rather, this
+ *	function and this module are intended to interface between that MCU support
+ *	and the CWSW Library suite.
  *
  *	@returns	0 if the component is successfully initialized.
  *	@returns	error code if the component is not initialized.
@@ -90,6 +92,7 @@ extern "C" {
  *	state. This means it takes exception to @req{SR_tbd_0003} and @req{SR_tbd_0004}
  *
  *	@ingroup	cwsw_arch_init_group
+ *//*
  */
 extern uint16_t Cwsw_Arch__Init(void);
 

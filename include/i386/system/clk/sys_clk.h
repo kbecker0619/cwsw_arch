@@ -1,11 +1,10 @@
 /** @file sys_clk.h
  *	@brief	One-sentence short description of file.
  *
- *	Copyright (c) 2018 Kevin L. Becker. All rights reserved.
+ *	Copyright (c) 2019 Kevin L. Becker. All rights reserved.
  *
- *	Original:
  *	Created on: Dec 9, 2018
- *	Author: KBECKE35
+ *	@author KBECKE35
  */
 
 #ifndef CWSW_ARCH_I386_SYSTEM_CLK_SYS_CLK_H_

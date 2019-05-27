@@ -1,11 +1,10 @@
-/** @file 
+/** @file
  *	@brief	Unit test cases for Operational States for the Architecture component.
  *
  *	Copyright (c) 2019 Kevin L. Becker. All rights reserved.
  *
- *	Original:
  *	Created on: Apr 21, 2019
- *	Author: KBECKE35
+ *	@author KBECKE35
  */
 
 // ============================================================================
@@ -123,7 +122,7 @@ test_sr_lib_0002(void)
 
 /** @test Confirm SR-LIB-0003.
  *  Confirm that all but init function indicate error condition if called before init.
- * 
+ *
  *  @xreq{SR_LIB_0003}
  */
 void

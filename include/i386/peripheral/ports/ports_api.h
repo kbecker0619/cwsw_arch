@@ -12,9 +12,8 @@
  *	attribution here but no copyright notice.
  *
  *
- *	Original:
  *	Created on: Dec 28, 2017
- *	Author: kbecker
+ *	@author kbecker
  */
 
 #ifndef PORTS_NONE_H_

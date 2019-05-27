@@ -3,9 +3,8 @@
  *
  *	Copyright (c) 2019 Kevin L. Becker. All rights reserved.
  *
- *	Original:
  *	Created on: Jan 3, 2018
- *	Author: kbecker
+ *	@author kbecker
  */
 
 #ifndef CWSW_ARCH_H_
@@ -31,7 +30,7 @@ extern "C" {
 // ============================================================================
 // ----	Constants -------------------------------------------------------------
 // ============================================================================
-#define CWSW_ARCH_H__REVSTRING "$Revision: 0123 $"
+#define CWSW_ARCH_H__REVSTRING "$Revision: 0.2.0 $"
 
 
 // ============================================================================

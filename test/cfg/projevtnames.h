@@ -1,17 +1,10 @@
 /** @file
  *	@brief	Project-specific event enumerations for simulated events.
  *
- *	Description:
- *
  *	Copyright (c) 2019 Kevin L. Becker. All rights reserved.
  *
- *	Original:
  *	Created on: Jan 20, 2018
- *	Author: kbecker
- *
- *	Current:
- *	$Revision: $
- *	$Date: $
+ *	@author kbecker
  */
 
 #ifndef UT_PROJEVTNAMES_H_

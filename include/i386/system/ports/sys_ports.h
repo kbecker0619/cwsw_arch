@@ -3,9 +3,8 @@
  *
  *	Copyright (c) 2019 Kevin L. Becker. All rights reserved.
  *
- *	Original:
  *	Created on: Dec 9, 2018
- *	Author: KBECKE35
+ *	@author KBECKE35
  */
 
 #ifndef CWSW_ARCH_I386_SYSTEM_PORTS_SYS_PORTS_H_

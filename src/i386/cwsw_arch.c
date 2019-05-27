@@ -5,13 +5,8 @@
  *
  *	Copyright (c) 2019 Kevin L. Becker. All rights reserved.
  *
- *	Original:
  *	Created on: Jan 3, 2018
- *	Author: kbecker
- *
- *	Current:
- *	$Revision: $
- *	$Date: $
+ *	@author kbecker
  */
 
 // ============================================================================
@@ -23,9 +18,9 @@
         (XPRJ_Debug_Linux_GCC)	||	\
         (XPRJ_NB_Debug)			||	\
 		(XPRJ_Win_MSVC_Debug)	||	\
-        (XPRJ_CVI_Debug) )			/* { */
+        (XPRJ_CVI_Debug) )
 #error Unknown CPU Architecture
-#endif															/* } */
+#endif
 
 // ----	System Headers --------------------------
 #include <stddef.h>		/* NULL */
@@ -87,6 +82,8 @@ PRIVATE bool cwsw_arch_initialized = false;
 // ----	Public Functions ------------------------------------------------------
 // ============================================================================
 
+/* See function documentation at prototype.
+ */
 uint16_t
 Cwsw_Arch__Init(void)
 {
