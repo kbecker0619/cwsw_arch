@@ -27,20 +27,21 @@
 							</tool>
 							<tool id="cdt.managedbuild.tool.gnu.c.compiler.mingw.base.2081887991" name="GCC C Compiler" superClass="cdt.managedbuild.tool.gnu.c.compiler.mingw.base">
 								<option id="gnu.c.compiler.option.include.paths.1373105128" name="Include paths (-I)" superClass="gnu.c.compiler.option.include.paths" useByScannerDiscovery="false" valueType="includePath">
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/cwsw_arch_core/include/i386/peripheral/ports}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/../../include/i386&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/../cfg&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/../../include/i386/peripheral/ports&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/../stubs&quot;"/>
 								</option>
 								<option id="gnu.c.compiler.option.preprocessor.def.symbols.476207683" name="Defined symbols (-D)" superClass="gnu.c.compiler.option.preprocessor.def.symbols" useByScannerDiscovery="false" valueType="definedSymbols">
 									<listOptionValue builtIn="false" value="&quot;XPRJ_Win_MinGW_${ConfigName}=1&quot;"/>
 								</option>
 								<option defaultValue="gnu.c.optimization.level.none" id="gnu.c.compiler.option.optimization.level.111429517" name="Optimization Level" superClass="gnu.c.compiler.option.optimization.level" useByScannerDiscovery="false" valueType="enumerated"/>
 								<option id="gnu.c.compiler.option.debugging.level.568696616" name="Debug Level" superClass="gnu.c.compiler.option.debugging.level" useByScannerDiscovery="false" value="gnu.c.debugging.level.max" valueType="enumerated"/>
-								<option id="gnu.c.compiler.option.dialect.std.596671972" superClass="gnu.c.compiler.option.dialect.std" useByScannerDiscovery="true" value="gnu.c.compiler.dialect.default" valueType="enumerated"/>
-								<option id="gnu.c.compiler.option.dialect.flags.85153564" superClass="gnu.c.compiler.option.dialect.flags" useByScannerDiscovery="true" value="-std=gnu11" valueType="string"/>
-								<option id="gnu.c.compiler.option.warnings.wconversion.731610887" superClass="gnu.c.compiler.option.warnings.wconversion" useByScannerDiscovery="false" value="true" valueType="boolean"/>
-								<option id="gnu.c.compiler.option.warnings.extrawarn.649634092" superClass="gnu.c.compiler.option.warnings.extrawarn" useByScannerDiscovery="false" value="true" valueType="boolean"/>
-								<option id="gnu.c.compiler.option.warnings.pedantic.1936776004" superClass="gnu.c.compiler.option.warnings.pedantic" useByScannerDiscovery="false" value="true" valueType="boolean"/>
+								<option id="gnu.c.compiler.option.dialect.std.596671972" name="Language standard" superClass="gnu.c.compiler.option.dialect.std" useByScannerDiscovery="true" value="gnu.c.compiler.dialect.default" valueType="enumerated"/>
+								<option id="gnu.c.compiler.option.dialect.flags.85153564" name="Other dialect flags" superClass="gnu.c.compiler.option.dialect.flags" useByScannerDiscovery="true" value="-std=gnu11" valueType="string"/>
+								<option id="gnu.c.compiler.option.warnings.wconversion.731610887" name="Implicit conversion warnings (-Wconversion)" superClass="gnu.c.compiler.option.warnings.wconversion" useByScannerDiscovery="false" value="true" valueType="boolean"/>
+								<option id="gnu.c.compiler.option.warnings.extrawarn.649634092" name="Extra warnings (-Wextra)" superClass="gnu.c.compiler.option.warnings.extrawarn" useByScannerDiscovery="false" value="true" valueType="boolean"/>
+								<option id="gnu.c.compiler.option.warnings.pedantic.1936776004" name="Pedantic (-pedantic)" superClass="gnu.c.compiler.option.warnings.pedantic" useByScannerDiscovery="false" value="true" valueType="boolean"/>
 								<inputType id="cdt.managedbuild.tool.gnu.c.compiler.input.1366396211" superClass="cdt.managedbuild.tool.gnu.c.compiler.input"/>
 							</tool>
 							<tool id="cdt.managedbuild.tool.gnu.c.linker.mingw.base.243789935" name="MinGW C Linker" superClass="cdt.managedbuild.tool.gnu.c.linker.mingw.base">
@@ -91,6 +92,7 @@
 								</option>
 								<option id="gnu.c.compiler.option.include.paths.1159104954" name="Include paths (-I)" superClass="gnu.c.compiler.option.include.paths" useByScannerDiscovery="false" valueType="includePath">
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/cfg&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/../stubs&quot;"/>
 								</option>
 								<inputType id="cdt.managedbuild.tool.gnu.c.compiler.input.1376827291" superClass="cdt.managedbuild.tool.gnu.c.compiler.input"/>
 							</tool>
@@ -135,6 +137,7 @@
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/cwsw_arch_core/include&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/ut&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/cfg&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/../stubs&quot;"/>
 								</option>
 								<option id="gnu.c.compiler.option.preprocessor.def.symbols.1207046744" name="Defined symbols (-D)" superClass="gnu.c.compiler.option.preprocessor.def.symbols" useByScannerDiscovery="false" valueType="definedSymbols">
 									<listOptionValue builtIn="false" value="&quot;XPRJ_${ConfigName}=1&quot;"/>
@@ -196,6 +199,7 @@
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/../test/ut&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/../test/cfg&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/../include&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/../stubs&quot;"/>
 								</option>
 								<option id="gnu.c.compiler.option.preprocessor.def.symbols.796023121" name="Defined symbols (-D)" superClass="gnu.c.compiler.option.preprocessor.def.symbols" useByScannerDiscovery="false" valueType="definedSymbols">
 									<listOptionValue builtIn="false" value="&quot;XPRJ_Win_Cygwin_${ConfigName}=1&quot;"/>

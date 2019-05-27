@@ -1,12 +1,12 @@
 /** @file
 
-@page cwsw_req Requirements Summary
+@page cwsw_req		Requirements Summary
 
 @par Table of software requirements - Architecture
 
 | Section			| Requirement 																		| Title 								| Comment	|
 | :---				| :---																				| :---									| :---		|
-| Operating State	| @anchor SR_ARCH_0000 \ref RQT_ARCH_000 "SR_ARCH_0000"	| Initialize API						| |
+| Operating State	| @anchor SR_ARCH_0000 \ref RQT_ARCH_0000 "SR_ARCH_0000"	| Initialize API						| |
 
 \n
 

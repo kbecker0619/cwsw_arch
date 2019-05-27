@@ -1,17 +1,11 @@
-/** @file cwsw_lib_test_op_states.c
- *	@brief	One-sentence short description of file.
- *
- *	Description:
+/** @file 
+ *	@brief	Unit test cases for Operational States for the Architecture component.
  *
  *	Copyright (c) 2019 Kevin L. Becker. All rights reserved.
  *
  *	Original:
  *	Created on: Apr 21, 2019
  *	Author: KBECKE35
- *
- *	Current:
- *	$Revision: $
- *	$Date: $
  */
 
 // ============================================================================
@@ -19,14 +13,14 @@
 // ============================================================================
 
 // ----	System Headers --------------------------
+#include <CUnit/Basic.h>
 
 // ----	Project Headers -------------------------
-#include <CUnit/Basic.h>
-#include "cwsw_eventsim.h"
+//#include "cwsw_eventsim.h"
 
 // ----	Module Headers --------------------------
-#include "cwsw_lib.h"
-#include "cwsw_lib_test_op_states.h"
+#include "cwsw_arch.h"
+#include "cwsw_arch_test_op_states.h"
 
 
 // ============================================================================
@@ -96,7 +90,7 @@ clean_suite_lib_op_states(void)
 void
 test_sr_lib_0001(void)
 {
-    UNUSED(Get(Cwsw_Lib, Initialized));
+    (void)Cwsw_Arch__Get_Initialized();
     CU_PASS("Get Initialization Status API Exists");
 }
 
@@ -107,7 +101,7 @@ test_sr_lib_0001(void)
 void
 test_sr_lib_0000(void)
 {
-    int initstat = Init(Cwsw_Lib);
+    int initstat = Cwsw_Arch__Init();
     /* check for either no problem, or reinitialization w/ no problem */
     CU_ASSERT((0 == initstat) || (2 == initstat));
 }
@@ -119,26 +113,25 @@ test_sr_lib_0000(void)
 void
 test_sr_lib_0002(void)
 {
-    extern bool cwsw_lib_initialized;
-    extern int cwsw_lib_cs_protection_count;
+    extern bool cwsw_arch_initialized;
 
-    cwsw_lib_initialized = false;			/* forcibly override any previous initialization */
-    cwsw_lib_cs_protection_count = 1234;	/* random, meaningless value that is not 0 */
-    CU_ASSERT_EQUAL(Init(Cwsw_Lib), 0);
-    CU_ASSERT_EQUAL(cwsw_lib_initialized, true);
-    CU_ASSERT_EQUAL(cwsw_lib_cs_protection_count, 0);
+    cwsw_arch_initialized = false;			/* forcibly override any previous initialization */
+    CU_ASSERT_EQUAL(Cwsw_Arch__Init(), 0);
+    CU_ASSERT_EQUAL(cwsw_arch_initialized, true);
 }
 
 
-/** Confirm that all but init function indicate error condition if called before init.
+/** @test Confirm SR-LIB-0003.
+ *  Confirm that all but init function indicate error condition if called before init.
+ * 
  *  @xreq{SR_LIB_0003}
  */
 void
 test_sr_lib_0003(void)
 {
-    extern bool cwsw_lib_initialized;
+    extern bool cwsw_arch_initialized;
 
-    cwsw_lib_initialized = false;        /* forcibly override any previous initialization */
+    cwsw_arch_initialized = false;        /* forcibly override any previous initialization */
     CU_FAIL("Test to be created yet");
 }
 

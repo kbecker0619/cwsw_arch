@@ -1,3 +1,5 @@
+@page cwsw_arch Component: CWSW Architecture
+
 # CWSW MCU Architecture, on i386
 
 ## Overview

@@ -55,7 +55,7 @@
 // ============================================================================
 static char const * const cwsw_arch_RevString = "$Revision: 0.2.0 $";
 
-static bool initialized = false;
+PRIVATE bool cwsw_arch_initialized = false;
 
 
 // ============================================================================
@@ -114,7 +114,7 @@ Cwsw_Arch__Init(void)
 	SYS_DEVCON_PerformanceConfig(0);
 	SYS_PORTS_Initialize();
 
-	initialized = true;
+	cwsw_arch_initialized = true;
 	return 0;
 
 }
@@ -123,5 +123,5 @@ Cwsw_Arch__Init(void)
 bool
 Cwsw_Arch__Get_Initialized(void)
 {
-	return initialized;
+	return cwsw_arch_initialized;
 }

@@ -1,4 +1,0 @@
-# THIS IS NOT THE CORE CWSW LIBRARY DOXY PROJECT FILE
-# In spite of its name, this file is a stub only, so that the core CWSW Arch project can build.
-
-WARN_LOGFILE           = doxygen.log

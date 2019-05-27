@@ -1,15 +1,14 @@
+@page cwsw_arch_ovr Component: CWSW Architecture (overview: documentation folder)
+
 # Project-specific documentation folder for the Arch component
+
+<!-- Note: This document is not pure Markdown format: it is intended to be used inside of a
+Doxygen project, and therefore contains some embedded Doxy commands -->
 
 ## Overview
 
-This folder contains items that pertain only to this project. The actual component documentation is in the `doc_arch` folder.
-
-~~The project-specific files can be duplicated in the doc folder of the projects that use this component; the submodule is intended to be inserted in this location as a GIT submodule.~~
-
-
-**NOTE**:
-The Doxygen project is best rendered from the Integration project; because the component repo contains no dependencies on other CWSW Library components, the core settings are not available.
-
+This folder contains items that pertain only to this project. 
+The actual component documentation is in the `doc_arch` folder.
 
 
 ## Important folders

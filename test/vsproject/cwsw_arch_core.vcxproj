@@ -46,7 +46,7 @@
       <WarningLevel>EnableAllWarnings</WarningLevel>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>..\..\include\i386;..\app;..\cfg;..\cfg\vs2010</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\include\i386;..\app;..\cfg;..\cfg\vs2010;..\stubs</AdditionalIncludeDirectories>
       <DisableSpecificWarnings>4668</DisableSpecificWarnings>
     </ClCompile>
     <Link>
@@ -84,6 +84,7 @@
     <ClInclude Include="..\cfg\projcfg.h" />
     <ClInclude Include="..\cfg\projevtnames.h" />
     <ClInclude Include="..\cfg\vs2010\stdbool.h" />
+    <ClInclude Include="..\stubs\cwsw_lib.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

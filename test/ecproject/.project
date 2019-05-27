@@ -50,6 +50,11 @@
 			<locationURI>$%7BPARENT-2-PROJECT_LOC%7D/src</locationURI>
 		</link>
 		<link>
+			<name>stubs</name>
+			<type>2</type>
+			<locationURI>$%7BPARENT-1-PROJECT_LOC%7D/stubs</locationURI>
+		</link>
+		<link>
 			<name>test</name>
 			<type>2</type>
 			<locationURI>$%7BPARENT-2-PROJECT_LOC%7D/test</locationURI>

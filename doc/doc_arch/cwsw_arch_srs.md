@@ -24,34 +24,24 @@ requirements specific to the Library component.
 
 ### Operating State
 
-| ID 								| Title 								| Description 																					| Status 	| Trace From	| Comment 	|
-| :---:								| :---									| :---																							| :---		| :---			| :---		|
-| @anchor RQT_ARCH_000 SR_ARCH_0000 | Initialize API						| The Component shall provide an API for initializing the component.							| Draft 	| @ref RQT_LIB_0000 "SR_LIB_0000" | |
+| ID 								 | Title 								| Description 																					| Status 	| Trace From	| Comment 	|
+| :---:								 | :---									| :---																							| :---		| :---			| :---		|
+| @anchor RQT_ARCH_0000 SR_ARCH_0000 | Initialize API						| The Component shall provide an API for initializing the component.							| Draft 	| @ref RQT_LIB_0000 "SR_LIB_0000" | |
 
 <br>
 
 ### Tasking API
 
-| ID 									| Title 								| Description 																					| Status 	| Trace From	| Comment 	|
-| :---:									| :---									| :---																							| :---		| :---			| :---		|
-| <a name="SR_tbd_0200">SR_LIB_0200</a>	| Tasking API							| The Component shall provide an API in support of OS tasks or threads.							| Draft		| N/A			| |
+| ID 	| Title	| Description		| Status 	| Trace From	| Comment 	|
+| :---:	| :---	| :---				| :---		| :---			| :---		|
+|   	|  		| 					|   		|   			| |
 
 <br>
 
 ### Critical Sections / Protected Regions
 
-| ID 									| Title 								| Description 																				| Status 	| Trace From	| Comment 	|
-| :---:									| :---									| :---																						| :---		| :---			| :---		|
-| <a name="SR_LIB_0300">SR_LIB_0300</a> | Critical Section API 					| The Component shall provide an API managing Critical Sections (aka Protected Regions).    | Draft     | (tbd)         | |
-| <a name="SR_LIB_0301">SR_LIB_0301</a>	| Enter Critical Section API            | The Component shall provide an API for entering a Critical Section or Protected Region.	| Draft		| SR_LIB_0300	| |
-| <a name="SR_LIB_0302">SR_LIB_0302</a> | Leave Critical Section API            | The Component shall provide an API for leaving a Critical Section or Protected Region.    | Draft     | SR_LIB_0300   | |
-| <a name="SR_LIB_0303">SR_LIB_0303</a> | Critical Section Nesting Level: Incrementation    | The Component shall increment the Critical Section Nesting level for the requested protection type, with each invocation of the Enter Critical Section API, provided doing so will not violate counter constraints after incrementation.  | Draft | (tbd) | |
-| <a name="SR_LIB_0304">SR_LIB_0304</a> | Critical Section Nesting Level: Decrementation    | The Component shall decrement the Critical Section Nesting Level for the requested protection type, with each invocation of the Leave Critical Section API, provided doing so will not violate counter constraints after decrementation.  | Draft | (tbd) | |
-| <a name="SR_LIB_0305">SR_LIB_0305</a> | Critical Section Nesting Level: Data range        | The range of the Critical Section Nesting Counter(s) shall be from 0 to the value INT_MAX on the host system.   | Draft | (tbd) | |
-| <a name="SR_LIB_0306">SR_LIB_0306</a> | Critical Section Nesting Level, Invalid value     | If the Critical Section Nesting Level for the requested protection type is invalid, the Enter Critical Section API shall treat it as if it were at the floor (ambient, initialized) level. | Draft    | (tbd) | |
-| <a name="SR_LIB_0307">SR_LIB_0307</a> | Enter Critical Section Behavior, First Activation | If the Critical Section Nesting Level for the requested protection type is at the floor (ambient, initialized) count, upon activating the Enter Critical Section API, the Critical Section Protection mechanism specified by the argument shall be activated.   | Draft | (tbd) | |
-| <a name="SR_LIB_0308">SR_LIB_0308</a> | Enter Critical Section Behavior, Already Active   | If the Critical Section Nesting Level for the requested protection type is above the floor but still within the valid range, upon activating the Enter Critical Section API, no Enable Protection behavior shall be invoked.  | Draft | (tbd) | |
-| <a name="SR_LIB_0309">SR_LIB_0309</a> | Leave Critical Section Behavior, Already Active   | If the Critical Section Nesting Level for the requested protection type is above the floor but still within the valid range, upon activating the Leave Critical Section API, no Disable Protection behavior shall be invoked. | Draft | (tbd) | |
-| <a name="SR_LIB_0310">SR_LIB_0310</a> | Leave Critical Section Behavior, Last Deactivation| If the Critical Section Nesting Level for the requested protection type will be at the floor after decrementing, the Disable Protection behavior shall be invoked.    | Draft | (tbd) | |
+| ID 	| Title	| Description		| Status 	| Trace From	| Comment 	|
+| :---:	| :---	| :---				| :---		| :---			| :---		|
+|   	|  		| 					|   		|   			| |
 
 <br>

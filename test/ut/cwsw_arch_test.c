@@ -22,9 +22,7 @@
 
 // ----	Module Headers --------------------------
 #include "cwsw_arch.h"
-#include "cwsw_lib_test_op_states.h"
-#include "cwsw_lib_test_task_support.h"
-#include "cwsw_lib_test_crit_section.h"
+#include "cwsw_arch_test_op_states.h"
 
 
 // ============================================================================
@@ -111,75 +109,75 @@ main(void)
 	/* CWSW Library Tasking Support test suite */
 	do
 	{
-		CU_pTest tests[1] = {0};
+//		CU_pTest tests[1] = {0};
 		if(cu_setup_ok)
 		{
-			pSuite = CU_add_suite(
-					"CWSW Arch Component, Tasking Support",
-					init_suite_lib_task_support,
-					clean_suite_lib_task_support);
-			if(NULL == pSuite)
-			{
-				cu_setup_ok = false;
-				break;
-			}
-
-			/* add tests to Operating States test suite */
-			tests[0] = CU_add_test(pSuite, "SR_LIB_0200: Tasking Support API", test_sr_lib_0200);
-			if(!tests[0])
-			{
-				cu_setup_ok = false;
-				break;
-			}
+//			pSuite = CU_add_suite(
+//					"CWSW Arch Component, Tasking Support",
+//					init_suite_lib_task_support,
+//					clean_suite_lib_task_support);
+//			if(NULL == pSuite)
+//			{
+//				cu_setup_ok = false;
+//				break;
+//			}
+//
+//			/* add tests to Operating States test suite */
+//			tests[0] = CU_add_test(pSuite, "SR_LIB_0200: Tasking Support API", test_sr_lib_0200);
+//			if(!tests[0])
+//			{
+//				cu_setup_ok = false;
+//				break;
+//			}
 
 			/* sr_lib_0201 is not yet ready for testing */
-			(void)CU_set_test_active(tests[0], CU_FALSE);
+//			(void)CU_set_test_active(tests[0], CU_FALSE);
 		}
 	} while(0);
 
 	/* CWSW Library Protected Regions test suite */
 	do {
-		CU_pTest tests[11] = {0};
+//		CU_pTest tests[11] = {0};
 		if(cu_setup_ok)
 		{
-			pSuite = CU_add_suite(
-					"CWSW Arch Component, Protected Regions Support",
-					init_suite_lib_crit_section,
-					clean_suite_lib_crit_section);
-			if(NULL == pSuite)
-			{
-				cu_setup_ok = false;
-				break;
-			}
-
-			/* add tests to Operating States test suite */
-			tests[ 0] = CU_add_test(pSuite, "SR_LIB_0301: Critical Section API, Enter",									test_sr_lib_0301);
-			tests[ 1] = CU_add_test(pSuite, "SR_LIB_0302: Critical Section API, Leave",									test_sr_lib_0302);
-			tests[ 2] = CU_add_test(pSuite, "SR_LIB_0303: Critical Section Counter: Inactive",							test_sr_lib_0303_floor);
-			tests[ 3] = CU_add_test(pSuite, "SR_LIB_0303: Critical Section Counter: Increment to Max Nesting Depth",	test_sr_lib_0303_ceiling);
-			tests[ 4] = CU_add_test(pSuite, "SR_LIB_0304: Critical Section Counter: Decrement from Max Nesting Depth",	test_sr_lib_0304_ceiling);
-			tests[ 5] = CU_add_test(pSuite, "SR_LIB_0304: Critical Section Counter: Decrement to Inactive",				test_sr_lib_0304_floor);
-			tests[ 6] = CU_add_test(pSuite, "SR_LIB_0306: Critical Section Counter: Invalid Value",						test_sr_lib_0306);
-			tests[ 7] = CU_add_test(pSuite, "SR_LIB_0307: Critical Section Counter: Enter when Inactive",				test_sr_lib_0307);
-			tests[ 8] = CU_add_test(pSuite, "SR_LIB_0308: Critical Section Counter: Enter when Active",					test_sr_lib_0308);
-			tests[ 9] = CU_add_test(pSuite, "SR_LIB_0309: Critical Section Counter: Leave when Active",					test_sr_lib_0309);
-			tests[10] = CU_add_test(pSuite, "SR_LIB_0310: Critical Section Counter: Leave when Active",					test_sr_lib_0310);
-			if(   !tests[ 0]
-			   || !tests[ 1]
-			   || !tests[ 2]
-			   || !tests[ 3]
-			   || !tests[ 4]
-			   || !tests[ 5]
-			   || !tests[ 6]
-			   || !tests[ 7]
-			   || !tests[ 8]
-			   || !tests[ 9]
-			   || !tests[10]
-			   )
-			{
-				cu_setup_ok = false;
-				break;
-			}
+//			pSuite = CU_add_suite(
+//					"CWSW Arch Component, Protected Regions Support",
+//					init_suite_lib_crit_section,
+//					clean_suite_lib_crit_section);
+//			if(NULL == pSuite)
+//			{
+//				cu_setup_ok = false;
+//				break;
+//			}
+//
+//			/* add tests to Operating States test suite */
+//			tests[ 0] = CU_add_test(pSuite, "SR_LIB_0301: Critical Section API, Enter",									test_sr_lib_0301);
+//			tests[ 1] = CU_add_test(pSuite, "SR_LIB_0302: Critical Section API, Leave",									test_sr_lib_0302);
+//			tests[ 2] = CU_add_test(pSuite, "SR_LIB_0303: Critical Section Counter: Inactive",							test_sr_lib_0303_floor);
+//			tests[ 3] = CU_add_test(pSuite, "SR_LIB_0303: Critical Section Counter: Increment to Max Nesting Depth",	test_sr_lib_0303_ceiling);
+//			tests[ 4] = CU_add_test(pSuite, "SR_LIB_0304: Critical Section Counter: Decrement from Max Nesting Depth",	test_sr_lib_0304_ceiling);
+//			tests[ 5] = CU_add_test(pSuite, "SR_LIB_0304: Critical Section Counter: Decrement to Inactive",				test_sr_lib_0304_floor);
+//			tests[ 6] = CU_add_test(pSuite, "SR_LIB_0306: Critical Section Counter: Invalid Value",						test_sr_lib_0306);
+//			tests[ 7] = CU_add_test(pSuite, "SR_LIB_0307: Critical Section Counter: Enter when Inactive",				test_sr_lib_0307);
+//			tests[ 8] = CU_add_test(pSuite, "SR_LIB_0308: Critical Section Counter: Enter when Active",					test_sr_lib_0308);
+//			tests[ 9] = CU_add_test(pSuite, "SR_LIB_0309: Critical Section Counter: Leave when Active",					test_sr_lib_0309);
+//			tests[10] = CU_add_test(pSuite, "SR_LIB_0310: Critical Section Counter: Leave when Active",					test_sr_lib_0310);
+//			if(   !tests[ 0]
+//			   || !tests[ 1]
+//			   || !tests[ 2]
+//			   || !tests[ 3]
+//			   || !tests[ 4]
+//			   || !tests[ 5]
+//			   || !tests[ 6]
+//			   || !tests[ 7]
+//			   || !tests[ 8]
+//			   || !tests[ 9]
+//			   || !tests[10]
+//			   )
+//			{
+//				cu_setup_ok = false;
+//				break;
+//			}
 		}
 	} while(0);
 

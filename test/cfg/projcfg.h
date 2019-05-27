@@ -1,17 +1,11 @@
 /** @file
  *	@brief	Project Configuration for CWSW Library Unit test environment
  *
- *	Description:
- *
  *	Copyright (c) 2019 Kevin L. Becker. All rights reserved.
  *
  *	Original:
  *	Created on: Sep 4, 2016
  *	Author: kbecker
- *
- *	Current:
- *	$Revision: $
- *	$Date: $
  */
 
 #ifndef PROJCFG_H_
