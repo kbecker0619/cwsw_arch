@@ -54,13 +54,14 @@
  *  @return non-0 for failure.
  */
 int
-init_suite_lib_op_states(void)
+init_suite_arch_op_states(void)
 {
     /* at this time, there are no test environment things to set up, nor are
      * there UUT environment things to set up. Simply do a nop.
      */
     return CUE_SUCCESS;
 }
+
 
 /** Perform final cleanup of the Operating States suite for the CWSW Library component.
  *  For this edition of this UT suite, there is no actual cleanup activity
@@ -71,12 +72,24 @@ init_suite_lib_op_states(void)
  *  @return non-0 for failure.
  */
 int
-clean_suite_lib_op_states(void)
+clean_suite_arch_op_states(void)
 {
     /* at this time, there are no UT environment nor UUT environment post-conditions that need to
      * be affirmed, or activities that need to be done. Simply return success.
      */
     return CUE_SUCCESS;
+}
+
+
+/**	@test Confirm presence of an API to initialize the component.
+ *  @xreq{SR_ARCH_0000}
+ */
+void
+test_sr_arch_0000(void)
+{
+    int initstat = Cwsw_Arch__Init();
+    /* check for either no problem, or reinitialization w/ no problem */
+    CU_ASSERT((0 == initstat) || (2 == initstat));
 }
 
 
@@ -87,22 +100,10 @@ clean_suite_lib_op_states(void)
  *  @xreq{SR_LIB_0001}
  */
 void
-test_sr_lib_0001(void)
+test_sr_arch_0001(void)
 {
     (void)Cwsw_Arch__Get_Initialized();
     CU_PASS("Get Initialization Status API Exists");
-}
-
-
-/** Confirm presence of an API to initialize the component.
- *  @xreq{SR_LIB_0000}
- */
-void
-test_sr_lib_0000(void)
-{
-    int initstat = Cwsw_Arch__Init();
-    /* check for either no problem, or reinitialization w/ no problem */
-    CU_ASSERT((0 == initstat) || (2 == initstat));
 }
 
 
@@ -110,7 +111,7 @@ test_sr_lib_0000(void)
  *  @xreq{SR_LIB_0002}
  */
 void
-test_sr_lib_0002(void)
+test_sr_arch_0002(void)
 {
     extern bool cwsw_arch_initialized;
 
@@ -126,7 +127,7 @@ test_sr_lib_0002(void)
  *  @xreq{SR_LIB_0003}
  */
 void
-test_sr_lib_0003(void)
+test_sr_arch_0003(void)
 {
     extern bool cwsw_arch_initialized;
 
@@ -139,7 +140,7 @@ test_sr_lib_0003(void)
  *  @xreq{SR_LIB_0004}
  */
 void
-test_sr_lib_0005(void)
+test_sr_arch_0004(void)
 {
     CU_FAIL("Test to be created yet");
 }

@@ -55,10 +55,7 @@ extern "C" {
 
 // ==== Discrete Functions ================================================== {
 
-/* contrary to normal practice, this function doxymented here (at the API,
- * rather than in the implementation) so that it doesn't need to be done
- * repeatedly, for each supported architecture.
- *//** Initialization for the MCU Architecture Support component.
+/** Initialization for the MCU Architecture Support component.
  *	This function's responsibility is to set up the local vars, and manage the
  *	necessary HW, to prepare for the task function's 1st call (once the
  *	scheduler has been started).
@@ -92,7 +89,10 @@ extern "C" {
  *	state. This means it takes exception to @req{SR_tbd_0003} and @req{SR_tbd_0004}
  *
  *	@ingroup	cwsw_arch_init_group
- *//*
+ *//* IMPLEMENTATION NOTE
+ * contrary to normal practice, this function doxymented here (at the API,
+ * rather than in the implementation) so that it doesn't need to be done
+ * repeatedly, for each supported architecture.
  */
 extern uint16_t Cwsw_Arch__Init(void);
 

@@ -24,7 +24,7 @@
       </logicalFolder>
       <itemPath>app/main.c</itemPath>
     </logicalFolder>
-    <logicalFolder name="f1" displayName="stubs" projectFiles="true" kind="ROOT">
+    <logicalFolder name="f1" displayName="stubs" projectFiles="true">
       <itemPath>stubs/cwsw_lib.h</itemPath>
     </logicalFolder>
     <logicalFolder name="TestFiles"
@@ -35,8 +35,8 @@
                      displayName="cwsw_arch_test"
                      projectFiles="true"
                      kind="TEST">
-        <itemPath>ut/cwsw_arc_test_op_states.c</itemPath>
         <itemPath>ut/cwsw_arch_test.c</itemPath>
+        <itemPath>ut/cwsw_arch_test_op_states.c</itemPath>
         <itemPath>ut/cwsw_arch_test_op_states.h</itemPath>
       </logicalFolder>
     </logicalFolder>
@@ -71,6 +71,7 @@
             <pElem>stubs</pElem>
           </incDir>
           <preprocessorList>
+            <Elem>BUILD_FOR_UNIT_TEST=/* cunit focus */99</Elem>
             <Elem>XPRJ_NB_${CONF}</Elem>
           </preprocessorList>
           <warningLevel>2</warningLevel>
@@ -100,6 +101,11 @@
       <item path="cfg/projevtnames.h" ex="false" tool="3" flavor2="0">
       </item>
       <folder path="TestFiles">
+        <cTool>
+          <preprocessorList>
+            <Elem>BUILD_FOR_UNIT_TEST=99</Elem>
+          </preprocessorList>
+        </cTool>
         <linkerTool>
           <linkerLibItems>
             <linkerOptionItem>`pkg-config --libs cunit`</linkerOptionItem>
@@ -116,9 +122,9 @@
       </folder>
       <item path="stubs/cwsw_lib.h" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="ut/cwsw_arc_test_op_states.c" ex="false" tool="0" flavor2="0">
-      </item>
       <item path="ut/cwsw_arch_test.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="ut/cwsw_arch_test_op_states.c" ex="false" tool="0" flavor2="0">
       </item>
       <item path="ut/cwsw_arch_test_op_states.h" ex="false" tool="3" flavor2="0">
       </item>
@@ -171,9 +177,9 @@
       </folder>
       <item path="stubs/cwsw_lib.h" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="ut/cwsw_arc_test_op_states.c" ex="false" tool="0" flavor2="0">
-      </item>
       <item path="ut/cwsw_arch_test.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="ut/cwsw_arch_test_op_states.c" ex="false" tool="0" flavor2="0">
       </item>
       <item path="ut/cwsw_arch_test_op_states.h" ex="false" tool="3" flavor2="0">
       </item>

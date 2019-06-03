@@ -88,7 +88,7 @@ uint16_t
 Cwsw_Arch__Init(void)
 {
 	// for desktop use, there's really not much to do here.
-	if(BUILD_FOR_UNIT_TEST)
+	if(BUILD_FOR_UNIT_TEST == CONSOLE)
 	{
 		SUPPRESS_EXTRAISO_IDENT;	/* suppress warning for function name */
 
@@ -113,7 +113,6 @@ Cwsw_Arch__Init(void)
 
 	cwsw_arch_initialized = true;
 	return 0;
-
 }
 
 

@@ -34,6 +34,7 @@
 								</option>
 								<option id="gnu.c.compiler.option.preprocessor.def.symbols.476207683" name="Defined symbols (-D)" superClass="gnu.c.compiler.option.preprocessor.def.symbols" useByScannerDiscovery="false" valueType="definedSymbols">
 									<listOptionValue builtIn="false" value="&quot;XPRJ_Win_MinGW_${ConfigName}=1&quot;"/>
+									<listOptionValue builtIn="false" value="BUILD_FOR_UNIT_TEST=1"/>
 								</option>
 								<option defaultValue="gnu.c.optimization.level.none" id="gnu.c.compiler.option.optimization.level.111429517" name="Optimization Level" superClass="gnu.c.compiler.option.optimization.level" useByScannerDiscovery="false" valueType="enumerated"/>
 								<option id="gnu.c.compiler.option.debugging.level.568696616" name="Debug Level" superClass="gnu.c.compiler.option.debugging.level" useByScannerDiscovery="false" value="gnu.c.debugging.level.max" valueType="enumerated"/>

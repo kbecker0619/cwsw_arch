@@ -182,6 +182,24 @@ extern "C" {
 #endif
 
 
+/**	Special "magic" marker for CUNIT unit testing environment.
+ * 	If the command-line define of the CUNIT project defines BUILD_FOR_UNIT_TEST
+ * 	with a value of 99, certain behaviors within the component are different,
+ * 	depending on the needs of the unit test environment.
+ */
+#define CUNIT	99
+
+/**	Special "magic" marker for the CONSOLE- based demo application.
+ * 	If the command-line define of the demo project defines BUILD_FOR_UNIT_TEST
+ * 	with a value of 1, certain behaviors within the component are different,
+ * 	depending on the needs of the demo app environment.
+ *
+ * 	This value specifically chosen because most instances of value #true also
+ * 	have the value "1", so that the default build, in the absence of a command-
+ * 	line define, will enable console behavior.
+ */
+#define CONSOLE	 1
+
 /*	Allow for the possibility that BUILD_FOR_UNIT_TEST might be a command-line
  *	define. Pick reasonable defaults if not defined.
  */

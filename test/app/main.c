@@ -11,14 +11,17 @@
 // ----	Include Files ---------------------------------------------------------
 // ============================================================================
 
+#include "projcfg.h"
+
 // ----	System Headers --------------------------
 #include <stdio.h>
 #include <stdlib.h>
-#include <limits.h>	/* INT_MAX */
+#include <limits.h>		/* INT_MAX */
 
 // ----	Project Headers -------------------------
 
 // ----	Module Headers --------------------------
+#include "cwsw_lib.h"
 #include "cwsw_arch.h"
 
 
