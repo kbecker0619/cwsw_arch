@@ -1,7 +1,8 @@
 /** @file
  *	@brief	API for CWSW Arch component (MCU architecture).
  *
- *	Copyright (c) 2019 Kevin L. Becker. All rights reserved.
+ *	\copyright
+ *	Copyright (c) 2020 Kevin L. Becker. All rights reserved.
  *
  *	Created on: Jan 3, 2018
  *	@author kbecker
@@ -19,7 +20,7 @@
 // ----	Project Headers -------------------------
 
 // ----	Module Headers --------------------------
-#include "../cwsw_arch_common.h"
+#include "../cwsw_arch_common.h"	/* intentional path component in include statement, due to arch layout */
 
 
 #ifdef	__cplusplus

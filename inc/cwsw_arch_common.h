@@ -5,8 +5,8 @@
  *	Do not include this file directly; it is intended to be included by the architecture-specific
  *	API file in one of the supported architectures, located immediately below this file's location.
  *
- *
- *	Copyright (c) 2019 Kevin L. Becker. All rights reserved.
+ *	\copyright
+ *	Copyright (c) 2020 Kevin L. Becker. All rights reserved.
  *
  *	Created on: Jan 3, 2018
  *	@author kbecker
@@ -38,8 +38,6 @@ extern "C" {
 // ============================================================================
 // ----	Constants -------------------------------------------------------------
 // ============================================================================
-#define CWSW_ARCH_COMMON_H__REVSTRING "$Revision: 0.2.0 $"
-
 
 // ============================================================================
 // ----	Type Definitions ------------------------------------------------------
@@ -106,13 +104,13 @@ extern uint16_t Cwsw_Arch__Init(void);
  *	the Module argument in your IDE (e.g, Eclipse, NetBeans, etc.), and select
  *	Go To Definition.
  */
-enum { Cwsw_Arch = 1 };	/* Generic architecture for all MCU architectures */
+enum { Cwsw_Arch = 1 };				/* Component ID for CWSW MCU Architecture component; all supported MCU architectures have the same ID */
 
 /** Target symbol for Get(Cwsw_Arch, xxx) interface */
-#define Cwsw_Arch__Get(a)		Cwsw_Arch__Get_ ## a()
+#define Cwsw_Arch__Get(attribute)	Cwsw_Arch__Get_ ## attribute()
 
 /** Target for Get(Cwsw_Arch, Initialized) interface */
-extern bool 					Cwsw_Arch__Get_Initialized(void);
+extern bool 						Cwsw_Arch__Get_Initialized(void);
 
 // ==== /Targets for Get/Set APIs =========================================== }
 

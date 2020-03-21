@@ -1,7 +1,8 @@
 /** @file sys_clk.h
  *	@brief	One-sentence short description of file.
  *
- *	Copyright (c) 2019 Kevin L. Becker. All rights reserved.
+ *	\copyright
+ *	Copyright (c) 2020 Kevin L. Becker. All rights reserved.
  *
  *	Created on: Dec 9, 2018
  *	@author KBECKE35
