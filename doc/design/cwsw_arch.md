@@ -1,5 +1,5 @@
 @page Arch_Head Component: CWSW Architecture
-	@subpage Arch_Design \n
+#	@subpage Arch_Design \n
 	@subpage Arch_Integration
     @subpage Arch_srs \n
 
