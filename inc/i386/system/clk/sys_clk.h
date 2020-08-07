@@ -1,15 +1,15 @@
-/** @file sys_clk.h
+/** @file
  *	@brief	One-sentence short description of file.
  *
  *	\copyright
  *	Copyright (c) 2020 Kevin L. Becker. All rights reserved.
  *
  *	Created on: Dec 9, 2018
- *	@author KBECKE35
+ *	@author Kevin L. Becker
  */
 
-#ifndef CWSW_ARCH_I386_SYSTEM_CLK_SYS_CLK_H_
-#define CWSW_ARCH_I386_SYSTEM_CLK_SYS_CLK_H_
+#ifndef SYS_CLK_H
+#define SYS_CLK_H
 
 
 // ============================================================================
@@ -51,4 +51,4 @@ extern "C" {
 }
 #endif
 
-#endif /* CWSW_ARCH_I386_SYSTEM_CLK_SYS_CLK_H_ */
+#endif /* SYS_CLK_H */

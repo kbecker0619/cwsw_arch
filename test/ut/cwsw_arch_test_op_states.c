@@ -1,10 +1,11 @@
 /** @file
  *	@brief	Unit test cases for Operational States for the Architecture component.
  *
+ *	\copyright
  *	Copyright (c) 2019 Kevin L. Becker. All rights reserved.
  *
  *	Created on: Apr 21, 2019
- *	@author KBECKE35
+ *	@author Kevin L. Becker
  */
 
 // ============================================================================

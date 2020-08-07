@@ -3,10 +3,11 @@
  *
  *	This module is not intended to stand alone; it depends on some parts of the CWSW Lib component.
  *
+ *	\copyright
  *	Copyright (c) 2019 Kevin L. Becker. All rights reserved.
  *
  *	Created on: Jan 3, 2018
- *	@author kbecker
+ *	@author Kevin L. Becker
  */
 
 // ============================================================================

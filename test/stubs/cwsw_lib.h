@@ -1,14 +1,15 @@
 /** @file
  *	@brief	stubs to allow no-dependency compilation of standalone component project.
  *
+ *	\copyright
  *	Copyright (c) 2019 Kevin L. Becker. All rights reserved.
  *
  *	Created on: May 26, 2019
- *	@author KBECKE35
+ *	@author Kevin L. Becker
  */
 
-#ifndef STUBS_CWSW_LIB_H_
-#define STUBS_CWSW_LIB_H_
+#ifndef CWSW_LIB_H
+#define CWSW_LIB_H
 
 // ============================================================================
 // ----	Include Files ---------------------------------------------------------
@@ -30,8 +31,6 @@ extern "C" {
 // ============================================================================
 // ----	Constants -------------------------------------------------------------
 // ============================================================================
-#define STUBS_CWSW_LIB_H__REVSTRING "$Revision: 0.0.0 $"
-
 
 // ============================================================================
 // ----	Type Definitions ------------------------------------------------------
@@ -102,4 +101,4 @@ extern "C" {
 }
 #endif
 
-#endif /* STUBS_CWSW_LIB_H_ */
+#endif /* CWSW_LIB_H */

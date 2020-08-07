@@ -1,13 +1,14 @@
 /** @file
  *
+ *	\copyright
  *	Copyright (c) 2019 Kevin L. Becker. All rights reserved.
  *
  *	Created on: Apr 21, 2019
- *	@author KBECKE35
+ *	@author Kevin L. Becker
  */
 
-#ifndef UT_CWSW_LIB_TEST_OP_STATES_H_
-#define UT_CWSW_LIB_TEST_OP_STATES_H_
+#ifndef CWSW_LIB_TEST_OP_STATES_H
+#define CWSW_LIB_TEST_OP_STATES_H
 
 // ============================================================================
 // ----	Include Files ---------------------------------------------------------
@@ -55,4 +56,4 @@ extern void test_sr_arch_0004(void);
 }
 #endif
 
-#endif /* UT_CWSW_LIB_TEST_OP_STATES_H_ */
+#endif /* CWSW_LIB_TEST_OP_STATES_H */
