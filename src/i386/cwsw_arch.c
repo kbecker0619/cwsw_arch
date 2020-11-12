@@ -14,15 +14,6 @@
 // ----	Include Files ---------------------------------------------------------
 // ============================================================================
 
-#include "projcfg.h"
-#if !(  (XPRJ_Win_MinGW_Debug)	||	\
-        (XPRJ_Lin_GCC_Debug)	||	\
-        (XPRJ_NB_Debug)			||	\
-		(XPRJ_Win_MSVC_Debug)	||	\
-        (XPRJ_CVI_Debug) )
-#error Unknown CPU Architecture
-#endif
-
 // ----	System Headers --------------------------
 #include <stddef.h>		/* NULL */
 #include <stdbool.h>
@@ -32,6 +23,14 @@
 
 // ----	Module Headers --------------------------
 #include "cwsw_arch.h"
+
+#if !(  (XPRJ_Win_MinGW_Debug)	||	\
+        (XPRJ_Lin_GCC_Debug)	||	\
+        (XPRJ_NB_Debug)			||	\
+		(XPRJ_Win_MSVC_Debug)	||	\
+        (XPRJ_CVI_Debug) )
+#error Unknown CPU Architecture
+#endif
 
 
 // ============================================================================
